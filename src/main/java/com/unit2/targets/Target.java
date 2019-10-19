@@ -21,6 +21,10 @@ public class Target {
         return this.health;
     }
 
+    public boolean getIsDestroyed() {
+        return this.isDestroyed;
+    }
+
     public Target(Number health) {
         this.health = health;
         this.remainingHealth = health;
@@ -55,9 +59,5 @@ public class Target {
         if (this.remainingHealth.intValue() <= 0) {
             this.isDestroyed = true;
         }
-    }
-
-    public boolean getIsDestroyed() {
-        return this.isDestroyed;
     }
 }
